@@ -1,12 +1,13 @@
-import Dependencies._
+name := "hello"
 
-// This an example of a simple project definition.
-// It should build on both sbt 0.13.15 and sbt 1.0.0
-lazy val root = (project in file("."))
-  .settings(
-    organization in ThisBuild := "com.example",
-    scalaVersion in ThisBuild := "2.12.2",
-    version      in ThisBuild := "0.1.0-SNAPSHOT",
-    name := "Hello",
-    libraryDependencies += "org.apache.spark" % "spark-streaming_2.10" % "1.4.1"
-  )
+version := "1.0"
+
+scalaVersion := "2.11.8"
+
+val sparkVersion = "1.6.1"
+
+libraryDependencies ++= Seq(
+  "org.apache.spark" %% "spark-core" % sparkVersion,
+  "org.apache.spark" %% "spark-streaming" % sparkVersion,
+  "org.apache.spark" %% "spark-streaming-twitter" % sparkVersion
+)
