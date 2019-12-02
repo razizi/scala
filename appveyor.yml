@@ -1,7 +1,7 @@
-image: macos
+image: ubuntu
 
 install:
 - ls -al
-- sh: system_profiler SPHardwareDataType
+- sh: lshw -short
 
 build: off
