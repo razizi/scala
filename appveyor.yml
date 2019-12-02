@@ -1,7 +1,7 @@
-image: Ubuntu
+image: macos
 
 install:
 - ls -al
-- sh: free -m
+- sh: system_profiler SPHardwareDataType
 
 build: off
