@@ -1,0 +1,7 @@
+image: Ubuntu
+
+install:
+- ls -al
+- sh: free -m
+
+build: off
