@@ -3,5 +3,7 @@ image: ubuntu
 install:
 - ls -al
 - sh: sudo lshw -short
+- sh: curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -
+
 
 build: off
